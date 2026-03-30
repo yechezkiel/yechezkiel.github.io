@@ -7,12 +7,11 @@
 
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
 </head>
 
 <body>
 
-<!-- NAVBAR -->
+<!-- NAV -->
 <nav>
     <div class="container">
         <h1 class="logo">JOSEPH <span>BABU</span></h1>
@@ -38,12 +37,18 @@
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="section fade">
+<section id="about" class="section">
     <div class="container">
         <h2 class="title">About Me</h2>
+
         <p class="about-text">
-            I'm Joseph Babu, an Electronics and Communication Engineering student passionate about embedded systems, DSP, and FPGA design. 
-            I build real-world systems ranging from secure communication architectures to real-time vehicle telemetry solutions.
+            I'm Joseph Babu, a 2nd year Electronics and Communication Engineering student at Government Engineering College, Thrissur.
+            Passionate about embedded systems, digital signal processing, and FPGA-based design.
+        </p>
+
+        <p class="about-text">
+            I specialize in building real-world engineering systems — from chaos-driven secure communication architectures
+            to CAN-based real-time telemetry systems for electric go-karts.
         </p>
 
         <div class="skills">
@@ -54,28 +59,43 @@
 </section>
 
 <!-- PROJECTS -->
-<section id="projects" class="section fade">
+<section id="projects" class="section">
     <div class="container">
         <h2 class="title">Projects</h2>
 
         <div class="grid">
 
-            <div class="card">
-                <i class="fas fa-car"></i>
-                <h3>EV Telemetry System</h3>
-                <p>CAN-based real-time monitoring for performance data using ESP32 & MCP2515.</p>
-            </div>
-
-            <div class="card">
-                <i class="fas fa-atom"></i>
-                <h3>Chaos Codec</h3>
-                <p>Secure FPGA-based communication using dynamic encoding and Viterbi decoding.</p>
-            </div>
-
+            <!-- HDL Repo -->
             <div class="card">
                 <i class="fas fa-microchip"></i>
-                <h3>Digital Voltmeter</h3>
-                <p>8051-based multi-channel ADC system with LCD display.</p>
+                <h3>HDL Digital Systems</h3>
+                <p>Collection of Verilog-based digital designs including FSMs, encoders, and system-level modules.</p>
+
+                <div class="project-links">
+                    <a href="https://github.com/yechezkiel/HDL" target="_blank">View Code</a>
+                </div>
+            </div>
+
+            <!-- Chaos Codec -->
+            <div class="card">
+                <i class="fas fa-atom"></i>
+                <h3>Chaos-Driven Codec</h3>
+                <p>FPGA implementation of time-varying convolutional encoder with chaos-based security.</p>
+
+                <div class="project-links">
+                    <a href="https://github.com/yechezkiel/Chaos-Driven-Time-Varying-Convolutional-CoDec" target="_blank">View Code</a>
+                </div>
+            </div>
+
+            <!-- CAN GoKart -->
+            <div class="card">
+                <i class="fas fa-car"></i>
+                <h3>CAN Go-Kart Telemetry</h3>
+                <p>Real-time CAN-based telemetry system using ESP32 and MCP2515 for EV monitoring.</p>
+
+                <div class="project-links">
+                    <a href="https://github.com/yechezkiel/CAN-GOKart" target="_blank">View Code</a>
+                </div>
             </div>
 
         </div>
@@ -83,7 +103,7 @@
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="section fade">
+<section id="contact" class="section">
     <div class="container">
         <h2 class="title">Contact</h2>
 
@@ -100,6 +120,5 @@
 </footer>
 
 <script src="script.js"></script>
-
 </body>
 </html>
