@@ -735,7 +735,10 @@ footer p {
     opacity: 1;
     transform: translateY(0);
 }
-
+.no-js .reveal {
+    opacity: 1;
+    transform: none;
+}
 /* Responsive */
 @media (max-width: 900px) {
     .container {
