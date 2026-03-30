@@ -227,6 +227,45 @@
                     </a>
                 </div>
             </div>
+            <!-- Project 4: FPGA Crypto Accelerator (Under Construction) -->
+<div class="project-detail" id="crypto-project">
+    <div class="project-header">
+        <h2 style="font-size: 2rem;">🔐 FPGA‑Based Crypto Accelerator (AES‑128 + SHA‑256)</h2>
+        <p style="color: #888; margin-top: 0.5rem;">
+            <span style="background: #222; padding: 0.2rem 0.8rem; border-radius: 20px;">🚧 WORK IN PROGRESS</span>
+            <br>Hardware Security Module | Tamper‑Response | ESP32 Bridge
+        </p>
+    </div>
+
+    <h3>📋 Project Overview</h3>
+    <p>Designing a dedicated hardware accelerator for AES‑128 encryption/decryption and SHA‑256 hashing, implemented in Verilog on an FPGA. The system includes a protected key storage register that locks the root key after configuration – it cannot be read out, only used internally. A physical tamper button (or sensor) instantly zeros the key, demonstrating active tamper response. Communication is handled by an ESP32 acting as a USB‑to‑SPI bridge, allowing a Python script on a PC to send encryption or HMAC commands. The final system proves hardware key separation: even if the host is compromised, the secret key stays safe inside the FPGA.</p>
+
+    <h3>🔧 Planned Features</h3>
+    <ul style="color: #ccc; margin-left: 1.5rem;">
+        <li><strong>AES‑128:</strong> ECB and CBC modes, fully pipelined for high throughput</li>
+        <li><strong>SHA‑256:</strong> HMAC support for authentication</li>
+        <li><strong>Key Storage:</strong> Internal register with write‑only access (locked after programming)</li>
+        <li><strong>Tamper Detection:</strong> Physical button triggers key zeroization and erases sensitive state</li>
+        <li><strong>Host Interface:</strong> ESP32 acts as SPI bridge – commands from Python over USB</li>
+        <li><strong>FPGA Target:</strong> Xilinx Artix‑7 or similar (Vivado development)</li>
+    </ul>
+
+    <h3>📊 Current Status</h3>
+    <div class="proof-section">
+        <p><i class="fas fa-spinner fa-spin"></i> <strong>In Progress:</strong> AES‑128 core designed and simulated; SHA‑256 module under implementation</p>
+        <p><i class="fas fa-code-branch"></i> <strong>Next Steps:</strong> Integrate key storage with write‑once logic, implement tamper circuit on FPGA board, write ESP32 firmware and Python host script</p>
+        <p><i class="fas fa-file-alt"></i> <strong>Documentation:</strong> Design notes and simulation results will be added as development continues</p>
+    </div>
+
+    <div class="project-links" style="margin-top: 1.5rem;">
+        <a href="#" class="project-link">
+            <i class="fab fa-github"></i> Repository (Coming Soon)
+        </a>
+        <a href="#" class="project-link">
+            <i class="fas fa-file-pdf"></i> Design Spec (Draft)
+        </a>
+    </div>
+</div>
             
             <div style="text-align: center; margin-top: 3rem;">
                 <a href="index.html" class="btn">← BACK TO HOME</a>
