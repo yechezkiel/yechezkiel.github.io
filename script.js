@@ -71,7 +71,8 @@ function revealOnScroll() {
     }
 }
 
-window.addEventListener('scroll', revealOnScroll); // ✅ FIXED
+window.addEventListener('scroll', revealOnScroll);
+window.addEventListener('load', revealOnScroll);
 
 // Mobile Menu Toggle (optional but already in HTML)
 const menuBtn = document.getElementById('mobileMenuBtn');
