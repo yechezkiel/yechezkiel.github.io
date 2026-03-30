@@ -7,15 +7,16 @@ const texts = [
     'DSP Algorithms',
     'CAN Telemetry Systems'
 ];
+
 let textIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
 
 function typeText() {
     if (!typedTextElement) return;
-    
+
     const currentText = texts[textIndex];
-    
+
     if (isDeleting) {
         typedTextElement.textContent = currentText.substring(0, charIndex - 1);
         charIndex--;
@@ -23,20 +24,20 @@ function typeText() {
         typedTextElement.textContent = currentText.substring(0, charIndex + 1);
         charIndex++;
     }
-    
+
     if (!isDeleting && charIndex === currentText.length) {
         isDeleting = true;
         setTimeout(typeText, 2000);
         return;
     }
-    
+
     if (isDeleting && charIndex === 0) {
         isDeleting = false;
         textIndex = (textIndex + 1) % texts.length;
         setTimeout(typeText, 500);
         return;
     }
-    
+
     const speed = isDeleting ? 50 : 100;
     setTimeout(typeText, speed);
 }
@@ -63,11 +64,21 @@ function revealOnScroll() {
         const windowHeight = window.innerHeight;
         const revealTop = reveals[i].getBoundingClientRect().top;
         const revealPoint = 100;
-        
+
         if (revealTop < windowHeight - revealPoint) {
             reveals[i].classList.add('active');
         }
     }
 }
 
-window.addEventListener('scroll', revealOnScroll
+window.addEventListener('scroll', revealOnScroll); // ✅ FIXED
+
+// Mobile Menu Toggle (optional but already in HTML)
+const menuBtn = document.getElementById('mobileMenuBtn');
+const navLinks = document.getElementById('navLinks');
+
+if (menuBtn && navLinks) {
+    menuBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+}
