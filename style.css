@@ -5,9 +5,9 @@
 }
 
 body {
-    font-family: 'Segoe UI', sans-serif;
     background: #000;
     color: #fff;
+    font-family: 'Segoe UI', sans-serif;
     scroll-behavior: smooth;
 }
 
@@ -16,12 +16,12 @@ body {
     margin: auto;
 }
 
-/* NAV */
+/* NAVBAR */
 nav {
     position: fixed;
     width: 100%;
+    background: rgba(0,0,0,0.7);
     backdrop-filter: blur(10px);
-    background: rgba(0,0,0,0.6);
     border-bottom: 1px solid #222;
     z-index: 1000;
 }
@@ -32,13 +32,25 @@ nav .container {
     padding: 1rem 0;
 }
 
-.logo {
-    font-size: 1.5rem;
-    white-space: nowrap;
-}
-
 .logo span {
     color: #aaa;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+/* FIX NAV OVERLAP */
+section {
+    padding: 100px 0;
+    scroll-margin-top: 80px;
 }
 
 /* HERO */
@@ -52,15 +64,14 @@ nav .container {
 #typing {
     font-size: 3rem;
     border-right: 2px solid white;
-    display: inline-block;
 }
 
 /* BUTTON */
 .btn {
-    display: inline-block;
+    margin-top: 20px;
     padding: 10px 25px;
     border: 1px solid white;
-    margin-top: 20px;
+    display: inline-block;
 }
 
 .btn:hover {
@@ -69,51 +80,59 @@ nav .container {
 }
 
 /* SECTIONS */
-section {
-    padding: 80px 0;
-}
-
-.section-title {
+.title {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
-/* GLASS PROJECT CARDS */
-.projects-grid {
+/* GRID */
+.grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
     gap: 2rem;
 }
 
-.project-card {
+/* CARDS */
+.card {
     padding: 2rem;
-    border-radius: 10px;
-    backdrop-filter: blur(10px);
     background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid #222;
     transition: 0.3s;
 }
 
-.project-card:hover {
+.card:hover {
     transform: translateY(-10px);
     border-color: white;
 }
 
+/* SKILLS */
+.skills {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skills span {
+    border: 1px solid #444;
+    padding: 5px 15px;
+}
+
 /* CONTACT */
-.contact-info {
+.contact {
     display: flex;
     justify-content: center;
     gap: 2rem;
+    font-size: 2rem;
 }
 
-/* ANIMATION */
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: 1s;
+.contact a {
+    color: white;
 }
 
-.fade-in.show {
-    opacity: 1;
-    transform: translateY(0);
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
 }
